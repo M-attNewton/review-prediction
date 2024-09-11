@@ -42,7 +42,7 @@ A transformer model would be the gold-standard for this type of task, perhaps wi
 ## Ensemble model 
 
 ### Linear classification and LightGBM (CPU)
-
+To create an effecitve Ensemble model that can be run on a CPU with a dataset of this size, a linear classifier is used to analyise the text data, whilst the LightGBM ensemble tree model is used to handle the tabular catergorial and numerical data types. The output of the linear classifier is added back in to the dataset and concatenated with the remaining features, this dataset is then parsed into the LightGBM model. This method provided an accuracy score of 7X%.
 
 ### LSTM and Neural Network (GPU)
 To better capture the meaning in the text data, a Long Short-Term Memory (LSTM) network can be used and can be more efficient to train than transformers. They can also be trained alongside another neural network that captures the catergorical and numerical features, creating an ensemble model. An pre-trained embedding layer using GloVe is defined followed by an LSTM layer, the output of this layer is concatenated with the catergorical and numerical features and parsed through a fully-connected layer, a softmax function is used to create the output layer of the network. Dropout and regularisation techniques are used to avoid overfitting.
