@@ -30,14 +30,14 @@ This model achieves an accuracy of 71.5% which establishes our baseline.
 ## Deep learning models
 Many different deep learning methods were tested, this repository highlights some of the models that were interesting to apply.
 
-### Gradient Boosting Methods (LightGBM)
+### Gradient Boosting Method (LightGBM)
 Since the dataset is tabular in nature, a tree based method with gradient boosting is a good model to try. The same features are used as in the linear case. LightGBM is used as the model as it is known to be better at handeling large datasets. The hyperparameters such as the number of leaves, number of estimators and learning rate are tuned to produce an accuracy score of 7X%. Which is similar to the linear model but, asdfadsf.
 
-### Neural Networks
+### Neural Network
 A neural network is a good model to try next due to its ability to handle both strucutred and unstructured data, in this case the tabular and text datatypes respectively. It is unlikely to outperform transformers or LSTMs as it will not be able to capture the context of the sentences as well but it can easily incorporate the other data types into the model. TF-IDF Vectorizer is used as in the linear model, a word embedding such as GloVe or Word2Vec would be more effective but more computationally expensive. Dropout and regularisation techniques are used to avoid overfitting. The neural network hyperparameters are tuned such that it can be run efficiently on a CPU and an accuracy score of 7X% in achieved. asdfadsf
 
-### Transformers
-
+### Transformer
+A transformer model would be the gold-standard for this type of task, perhaps with a custom ensemble technique to combine the tabular data or combining the model with XGBoost or LightGBM? Due to limited computational resources a small pre-trained model ("TinyBERT") was used and fine-tuned over a few epochs. Different models and techniques were trialed, however only a subset of the dataset was trained on for compuational effeciency, a score of 68% was achieved which is promising given the limit scope of this approach.
 
 ## Ensemble model 
 
