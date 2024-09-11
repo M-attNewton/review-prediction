@@ -33,14 +33,22 @@ Many different deep learning methods were tested, this repository highlights som
 ### Gradient Boosting Methods (LightGBM)
 Since the dataset is tabular in nature, a tree based method with gradient boosting is a good model to try. The same features are used as in the linear case. LightGBM is used as the model as it is known to be better at handeling large datasets. The hyperparameters such as the number of leaves, number of estimators and learning rate are tuned to produce an accuracy score of 7X%. Which is similar to the linear model but, asdfadsf.
 
+### Neural Networks
+A neural network is a good model to try next due to its ability to handle both strucutred and unstructured data, in this case the tabular and text datatypes respectively. It is unlikely to outperform transformers or LSTMs as it will not be able to capture the context of the sentences as well but it can easily incorporate the other data types into the model.
+
 ### LSTMs
 
 ### Transformers
 
-### Neural Networks
 
 
-## Ensemble model
+
+## Ensemble model 
+
+### Linear classification and LightGBM (CPU)
+
+### LSTM and Neural Network (GPU)
+73.3%
 
 
 
