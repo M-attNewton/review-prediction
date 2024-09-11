@@ -25,6 +25,23 @@ The dataset is split into training, cross-validation and test sets, using a 70%,
 ## Baseline model
 Linear Multi-class Classification is used as the baseline model, using a large feature set will give an idea of a baseline performance. The text features are parsed through a term frequency–inverse document frequency (TF-IDF) Vectorizer to create the text features, these are combined with the restaurant type, price, date, review length and average restaurant rating.
 
+This model achieves an accuracy of 71.5% which establishes our baseline.
+
 ## Deep learning models
+Many different deep learning methods were tested, this repository highlights some of the models that were interesting to apply.
+
+### Gradient Boosting Methods (LightGBM)
+Since the dataset is tabular in nature, a tree based method with gradient boosting is a good model to try. The same features are used as in the linear case. LightGBM is used as the model as it is known to be better at handeling large datasets. The hyperparameters such as the number of leaves, number of estimators and learning rate are tuned to produce an accuracy score of 7X%. Which is similar to the linear model but, asdfadsf.
+
+### LSTMs
+
+### Transformers
+
+### Neural Networks
+
 
 ## Ensemble model
+
+
+
+
