@@ -43,6 +43,7 @@ A transformer model would be the gold-standard for this type of task, perhaps wi
 
 ### Linear classification and LightGBM (CPU)
 
+
 ### LSTM and Neural Network (GPU)
 To better capture the meaning in the text data, a Long Short-Term Memory (LSTM) network can be used and can be more efficient to train than transformers. They can also be trained alongside another neural network that captures the catergorical and numerical features, creating an ensemble model. An pre-trained embedding layer using GloVe is defined followed by an LSTM layer, the output of this layer is concatenated with the catergorical and numerical features and parsed through a fully-connected layer, a softmax function is used to create the output layer of the network. Dropout and regularisation techniques are used to avoid overfitting.
 
@@ -50,5 +51,11 @@ This model is much larger and hence needs to be run on a GPU, these resources we
 
 
 ## Future work
-
+* One model that would be interesting to try would be to use a BERT Embedding for the text data and combine this with the categorical and numerical features to create the full set of features, then use XGBoost (if more computation is available) or LightGBM if restricted to a CPU.
+* There are many other models that could be explored, if would also be interesting to look at what other features could be created to expand the dataset.
+* Most of these experiments were restricted in terms of the computational resources avaialable, therefore if with greater access to GPUs these models could be improved.
+* More computation
+* More models
+* BERT with XGBoost
+* More features
 
