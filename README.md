@@ -34,7 +34,7 @@ Many different deep learning methods were tested, this repository highlights som
 Since the dataset is tabular in nature, a tree based method with gradient boosting is a good model to try. The same features are used as in the linear case. LightGBM is used as the model as it is known to be better at handeling large datasets. The hyperparameters such as the number of leaves, number of estimators and learning rate are tuned to produce an accuracy score of 7X%. Which is similar to the linear model but, asdfadsf.
 
 ### Neural Networks
-A neural network is a good model to try next due to its ability to handle both strucutred and unstructured data, in this case the tabular and text datatypes respectively. It is unlikely to outperform transformers or LSTMs as it will not be able to capture the context of the sentences as well but it can easily incorporate the other data types into the model.
+A neural network is a good model to try next due to its ability to handle both strucutred and unstructured data, in this case the tabular and text datatypes respectively. It is unlikely to outperform transformers or LSTMs as it will not be able to capture the context of the sentences as well but it can easily incorporate the other data types into the model. TF-IDF Vectorizer is used as in the linear model, a word embedding such as Glove or Word2Vec would be more effective but more computationally expensive. The neural network hyperparameters are tuned such that it can be run efficiently on a CPU and an accuracy score of 7X% in achieved. asdfadsf
 
 ### LSTMs
 
